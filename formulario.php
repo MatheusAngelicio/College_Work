@@ -1,28 +1,23 @@
 <?php
 
-//if(isset($_POST['submit']))
-//print_r('Nome: ' . $_POST['nome']);
-//print_r('<br>');
-//print_r('Email: ' . $_POST['email']);
-//print_r('<br>');
-//print_r('Telefone: ' . $_POST['telefone']);
-//print_r('<br>');
+if(isset($_POST['submit'])){
+    
+    include_once('config.php');
 
-include_once('config.php');
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $sexo = $_POST['genero'];
+    $data_nasc = $_POST['data_nascimento'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $endereco = $_POST['endereco'];
 
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco) 
+    VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$sexo = $_POST['genero'];
-$data_nasc = $_POST['data_nascimento'];
-$cidade = $_POST['cidade'];
-$estado = $_POST['estado'];
-$endereco = $_POST['endereco'];
-
-$result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco) 
-VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
-
+    header('Location: login.php');
+}
 ?>
 
 
@@ -39,7 +34,6 @@ VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$
             background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
         }
         .box{
-            margin-top: 50px;
             color: white;
             position: absolute;
             top: 50%;
