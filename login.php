@@ -46,6 +46,7 @@
     <a href="home.php">Voltar</a>
     <div>
         <h1>Login</h1>
+        <!--Chamo uma action para validar o login -->
         <form action="testLogin.php" method="POST">
             <input type="text" name="email" placeholder="Email">
             <br><br>
