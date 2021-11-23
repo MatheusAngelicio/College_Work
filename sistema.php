@@ -51,6 +51,7 @@
             </button>
         </div>
         <div class="d-flex">
+            <a href="itens.php" class="btn btn-success me-5">Itens</a>
             <a href="sair.php" class="btn btn-danger me-5">Sair</a>
         </div>
     </nav>
