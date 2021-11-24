@@ -120,7 +120,7 @@
     </div>
 
     <div class="box">
-        <a href=" ">Adicionar Item</a>
+        <a href="cadastroItem.php">Adicionar Item</a>
     </div>
 
     

@@ -16,6 +16,7 @@ if(isset($_POST['submit'])){
 
     $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email,telefone,sexo,data_nasc,cidade,estado,endereco) 
     VALUES ('$nome','$senha','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+    print_r($result);
 
     header('Location: login.php');
 }
@@ -28,7 +29,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário | GN</title>
+    <title>Formulário</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
