@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    // Para ter minha referencia ao bd
+    include_once('config.php');
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+        // Se nao existir uma sessao
+        // Destroi esses dados da sessao
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

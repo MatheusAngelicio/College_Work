@@ -28,7 +28,7 @@
          header('Location: login.php');
        } else {
            //Exite o usuario
-           //Crio sessao
+           //Crio uma sessao desse usuario
 
            $_SESSION['email'] = $email;
            $_SESSION['senha'] = $senha;
